@@ -6,6 +6,10 @@ test_that("add_predictors() combines predictors", {
 })
 
 test_that("add_predictors() combines with fun", {
+  stop(
+    utils::capture.output(add_predictors(~1, ~2, ~3, fun = "*")), "\n",
+    utils::capture.output(~1 * 2 * 3)
+  )
   expect_identical(add_predictors(~1, ~2, ~3, fun = "*"), ~1 * 2 * 3)
 })
 
