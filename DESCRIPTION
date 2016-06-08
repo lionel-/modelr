@@ -19,4 +19,6 @@ Imports:
     tibble
 RoxygenNote: 5.0.1
 Suggests: testthat
-Remotes: hadley/lazyeval
+Remotes:
+    hadley/lazyeval,
+    hadley/purrr
